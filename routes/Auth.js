@@ -6,8 +6,9 @@ const authenticateToken = require('../middleware/authenticate');
 
  
 route.post('/login',loginUser);
-route.post('/register',registerUser,loginUser)
-route.get('/user',authenticateToken,getUser)
 
+route.post('/register',registerUser,loginUser)
+
+route.get('/user',authenticateToken,getUser)
 
 module.exports = route

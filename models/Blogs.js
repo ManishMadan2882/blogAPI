@@ -1,29 +1,19 @@
 const mongoose = require('mongoose');
 
-require("./connect");
+
 
 const blogsSchema = new mongoose.Schema({
-    title:String,
-    account:{
+    title: String,
+    author: {
         type: mongoose.Types.ObjectId,
-        ref:'User'
+        ref: 'User'
     },
-    author:{
-        type: String,
-        required:true
-    },
-    imgUrl:String,
-    content:String,
-    comments:{
-        type:Array,
-        default:[]
-    },
-    createdAt:{
-        type: Date,
-        default: Date.now()
-    }   
+    imgUrl: String,
+    content: String,
+}, {
+    timestamps: true
 })
 
-const blogs = new mongoose.model("Blog",blogsSchema);
+const blogs = new mongoose.model("Blog", blogsSchema);
 
-module.exports.blogs = blogs;
+module.exports = blogs;

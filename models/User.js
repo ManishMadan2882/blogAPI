@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-require("./connectDB");
+require("../database/connectDB");
 //User Scheme 
 const userSchema = new mongoose.Schema({
     username: {
@@ -26,12 +26,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         unique: 'true'
     },
-    blogs: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Blog'
-        }
-    ]
 });
 
 

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "monitor":"nodemon server.js"
+    "monitor": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,8 @@
     "bcrypt": "^5.1.1",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.3"
   }
