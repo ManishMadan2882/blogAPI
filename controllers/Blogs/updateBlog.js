@@ -2,7 +2,7 @@ const Blogs = require('../../models/Blogs')
 const updateById = async (req,res)=>{
     try{
      const blog = await Blogs.findOne({_id:req.params.id})
-     if(blog.author === req.user.id)
+     if(blog.author == req.user.id)
      {
       await Blogs.updateOne({
         _id : req.params.id

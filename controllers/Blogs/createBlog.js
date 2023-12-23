@@ -5,7 +5,7 @@ const createBlog = async (req, res) => { //create a new blog
     const newbie = new Blogs({
         title,
         content,
-        author:userId,
+        author: userId,
         imgUrl
     })
     await newbie.save()

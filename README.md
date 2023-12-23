@@ -45,7 +45,7 @@ On successfull authentication the HTTP Response is
     "msg": "authenticated",
     "username": "antonio",
     "userId": "6586aaa535caa2862fd5defa",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudEBnZW4uaW8iLCJpZCI6IjY1ODZhYWE1MzVjYWEyODYyZmQ1ZGVmYSIsImlwX2FkZHJlc3MiOiI6OjEiLCJpYXQiOjE3MDMzMjQ5MTgsImV4cCI6MTcwNTkxNjkxOH0.Qm32AeMvuZdRqlJUTZs23YBYbIU1bgJZLGeKisgy2cA"
+    "token": "<JWT>"
 }
 ```
 ## Route to Get Authenticated User 
@@ -54,7 +54,7 @@ On successfull authentication the HTTP Response is
 ```
 GET /api/v1/auth/user HTTP/1.1
 Host: localhost:5400
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hbmlzaG1hZGFuMzIxQGdtYWlsLmNvbSIsImlkIjoiNjU4NmFlMTNlNDE4MjNmNjg3NThhYWYwIiwiaXBfYWRkcmVzcyI6Ijo6MSIsImlhdCI6MTcwMzMyNTIwNCwiZXhwIjoxNzA1OTE3MjA0fQ.4kHfbZTvvLfF6IcOCvs7LJYhwAJ0zm9vVAYmfOOWo58
+Authorization: bearer <JSON_WEB_TOKEN>
 Content-Type: application/json
 Content-Length: 106
 

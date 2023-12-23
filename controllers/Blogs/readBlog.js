@@ -28,6 +28,7 @@ const getPaginatedBlogs = async (req, res) => {
         const posts = await Blogs.find()
             .skip(startIndex)
             .limit(limit)
+            .populate('author', 'username') //expands the author reference till username
             .exec();
 
         res.json(posts);
